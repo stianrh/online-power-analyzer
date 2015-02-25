@@ -1,0 +1,16 @@
+<body>
+<div class='content'>
+	<form method='post'>{% csrf_token %}
+		{{ testform }}
+		<input type='submit'>
+    </form>
+	<p>Measurements:</p>
+	<ul>
+	{% for obj in objects %}
+	<li><a href='measure/{{ obj.id }}'>Voltage {{ obj.voltage }}, Time: {{ obj.time }}, Resolution: {{ obj.resolution }}</a></li> 
+	{% endfor %}
+	</ul>
+
+</div>
+</body>
+

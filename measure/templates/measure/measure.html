@@ -1,0 +1,15 @@
+<h3> ID: {{ testid }}</h3>
+<ul>
+	<li>Voltage: {{ obj.voltage }}</li>
+	<li>Seconds: {{ obj.time }} </li>
+	<li>Samples/sec: {{ obj.resolution }}</li>
+</ul>
+<form action='start'>
+	<input type='submit' value='Start Measure'>
+</form>
+<h2>Measurements</h2>
+<p>Average: {{ avg }} uA</p>
+
+{% if obj.measure_list != 'None' %}
+<img src="image"</img>
+{% endif %}
